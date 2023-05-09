@@ -1,0 +1,13 @@
+Python - Fundamentos:
+    - Python é uma linguagem de programação de alto nível, de uso geral, amplamente utilizada em aplicações web, desenvolvimento de software, ciência de dados e Machine Learning. Sua filosofia de projeto enfatiza a legibilidade do código com o uso de indentação significativa. Python é dinamicamente tipada e tem um garbage collector.
+    - Conhecer os tipos primitivos
+    - Declarar variáveis, considerando os diferentes tipos
+    - Usar estruturas condicionais ('if', 'else')
+    - Conhecer os operadores de comparação
+    - Usar estruturas de repetição e laços ('while', 'for')
+    - Usar funções, passando parâmetros e argumentos
+    - Manipular métodos
+    - Manipular arrays e listas
+    - Obter dados de uma API
+    - Criar construtores
+    - Funções anônimas
