@@ -15,16 +15,16 @@
     - Funções anônimas
 
 ## Estudo da arte
-Python é uma linguagem dinamicamente tipada, o que significa que não é necessário declarar o tipo de variável ou fazer casting (mudar o tipo de variável), pois o Interpretador se encarrega disso para nós!
-Os tipos de dados padrão do Python são:
-    - Inteiro (int)
-    - Ponto Flutuante ou Decimal (float)
-    - Tipo Complexo (complex)
-    - String (str)
-    - Boolean (bool)
-    - List (list)
-    - Tuple
-    - Dictionary (dic)
+    Python é uma linguagem dinamicamente tipada, o que significa que não é necessário declarar o tipo de variável ou fazer casting (mudar o tipo de variável), pois o Interpretador se encarrega disso para nós!
+    Os tipos de dados padrão do Python são:
+        - Inteiro (int)
+        - Ponto Flutuante ou Decimal (float)
+        - Tipo Complexo (complex)
+        - String (str)
+        - Boolean (bool)
+        - List (list)
+        - Tuple
+        - Dictionary (dic)
 
 ### Tipo Inteiro (int)
     O tipo inteiro é um tipo composto por caracteres numéricos (algarismos) inteiros.
