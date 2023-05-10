@@ -126,3 +126,4 @@ Mostra exemplos de como utilizar funções anônimas.
 - https://aws.amazon.com/pt/what-is/api/#:~:text=API%20significa%20Application%20Programming%20Interface,de%20servi%C3%A7o%20entre%20duas%20aplica%C3%A7%C3%B5es.
 - https://jacksongomesbr.gitbooks.io/programacao-orientada-a-objetos-com-python/content/objetos-em-python.html
 - https://pythonacademy.com.br/blog/funcoes-lambda-no-python#:~:text=Fun%C3%A7%C3%B5es%20lambda%20s%C3%A3o%20uma%20ferramenta,em%20outro%20lugar%20do%20c%C3%B3digo.
+- https://www.treinaweb.com.br/blog/consumindo-apis-com-python-parte-1

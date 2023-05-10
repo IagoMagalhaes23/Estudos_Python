@@ -1,5 +1,5 @@
 """
-    tipos_primitivos.py
+    estruturas_condicionais.py
     Autor: Iago Magalhães
     Descrição:
         - Mostrar exemplos de como utilizar estruturas condicionais em Python
