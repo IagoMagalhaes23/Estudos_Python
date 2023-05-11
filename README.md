@@ -13,7 +13,7 @@
    - Obter dados de uma API
    - Criar construtores
    - Funções anônimas
-- [ ] **Conceitos de Orientação a Objetos**:
+- [X] **Conceitos de Orientação a Objetos**:
    - A Programação Orientada a Objetos é um paradigma de programação de software baseado na composição e interação entre diversas unidades chamadas de 'objetos' e as classes, que contêm uma identidade, propriedades e métodos). Ela é baseada em quatro componentes da programação: abstração digital, encapsulamento, herança e polimorfismo.
    - Como funcionam objetos
    - Criar e utilizar construtores
