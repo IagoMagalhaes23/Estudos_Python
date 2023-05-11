@@ -15,7 +15,7 @@
 ## Estudo da arte
 
 ### Introdução a Programação Orientada a Objetos (POO)
-    A orientação a objetos é, sem dúvida alguma, um dos mais significativos conhecimentos daquele que quer efetivamente se aprofundar no universo da Ciência da Computação. Para haver uma precisa compreensão do que vem a ser tal conteúdo, torna-se indispensável, antes de mais nada, conhecer aspectos como sua origem e conceitos relacionados.
+A orientação a objetos é, sem dúvida alguma, um dos mais significativos conhecimentos daquele que quer efetivamente se aprofundar no universo da Ciência da Computação. Para haver uma precisa compreensão do que vem a ser tal conteúdo, torna-se indispensável, antes de mais nada, conhecer aspectos como sua origem e conceitos relacionados.
 
 ### Objeto x Classe x Instância
 Na POO (Programação Orientada a Objetos), os objetos do mundo real são analisados de uma forma abstrata, ou seja, as características do objeto que são levadas em consideração são apenas as que são fundamentais para o sistema. E aquilo que é importante será definido na classe.
@@ -53,35 +53,34 @@ Na POO (Programação Orientada a Objetos), os objetos do mundo real são analis
 
 ### Herança
 #### O que é herança?
-Uma das grandes vantagens do uso da orientação a objetos é justamente a utilização do conceito de herança. Com a herança o trabalho do programador pode ser otimizado, pois proporciona uma eficiente e segura política de reutilização de códigos, evitando assim o retrabalho. 
-A herança nos permite que características que são comuns a diversas classes sejam reunidas em uma única classe base. A partir desta, outras classes herdam suas especificações, e nelas apenas é implementado o que lhes falta, a diferença.
+    Uma das grandes vantagens do uso da orientação a objetos é justamente a utilização do conceito de herança. Com a herança o trabalho do programador pode ser otimizado, pois proporciona uma eficiente e segura política de reutilização de códigos, evitando assim o retrabalho. A herança nos permite que características que são comuns a diversas classes sejam reunidas em uma única classe base. A partir desta, outras classes herdam suas especificações, e nelas apenas é implementado o que lhes falta, a diferença.
 
 ####  Superclasse e Subclasse
-Essa classe base, que reúne informações comuns a outras classes, é chamada de Superclasse. Já a Subclasse é uma classe mais específica, que herda as funcionalidades da Superclasse e ainda adiciona funcionalidades específicas que por ventura venha a ter.
+    Essa classe base, que reúne informações comuns a outras classes, é chamada de Superclasse. Já a Subclasse é uma classe mais específica, que herda as funcionalidades da Superclasse e ainda adiciona funcionalidades específicas que por ventura venha a ter.
 
 ####  Herança múltipla
-Algumas linguagens de programação suportam a herança múltipla, que permite que uma subclasse tenha capacidade de herdar características de duas ou mais superclasses. Assim, uma única classe pode agrupar atributos e métodos de várias classes. Não é o caso de Java, que não permite essa funcionalidade.
+    Algumas linguagens de programação suportam a herança múltipla, que permite que uma subclasse tenha capacidade de herdar características de duas ou mais superclasses. Assim, uma única classe pode agrupar atributos e métodos de várias classes. Não é o caso de Java, que não permite essa funcionalidade.
 
 ### Polimorfismo
 #### O que é polimorfismo?
-A palavra Polimorfismo vem do grego, e significa muitas formas. Em orientação a objetos, é a capacidade de uma referência mudar de comportamento de acordo com o objeto a que se refere. Significa que um mesmo tipo de objeto, sob certas condições, pode se comportar de formas distintas ao receber uma mensagem. Ou seja, dependendo do contexto da execução, o sistema decidirá qual método será executado.
+    A palavra Polimorfismo vem do grego, e significa muitas formas. Em orientação a objetos, é a capacidade de uma referência mudar de comportamento de acordo com o objeto a que se refere. Significa que um mesmo tipo de objeto, sob certas condições, pode se comportar de formas distintas ao receber uma mensagem. Ou seja, dependendo do contexto da execução, o sistema decidirá qual método será executado.
 
 #### Sobrecarga de métodos
-Sobrecarga de métodos é a propriedade que torna possível a criação de métodos com o mesmo nome, que executam funções diferentes. Ele saberá de qual maneira deverá se comportar através da quantidade de argumentos informada. A sobrecarga de métodos facilita a implementação, pois muitas vezes a mesma operação tem implementações diferentes para cada situação, e ao invés de criarmos nomes para cada uma delas, podemos diferenciar apenas através dos argumentos enviados.
+    Sobrecarga de métodos é a propriedade que torna possível a criação de métodos com o mesmo nome, que executam funções diferentes. Ele saberá de qual maneira deverá se comportar através da quantidade de argumentos informada. A sobrecarga de métodos facilita a implementação, pois muitas vezes a mesma operação tem implementações diferentes para cada situação, e ao invés de criarmos nomes para cada uma delas, podemos diferenciar apenas através dos argumentos enviados.
 
 #### Classes e métodos abstratos
-Uma classe abstrata é uma superclasse criada apenas para representar entidades e conceitos abstratos, e dela não são gerados objetos, ou seja, a classe abstrata não é instanciada. 
-Geralmente criamos uma classe com um propósito específico, porém, a classe abstrata tem outra função, ela é criada com a intenção de que outras classes herdem funcionalidades delas. É definida como um modelo genérico a ser utilizado pelas suas subclasses.
-A utilização de classes abstratas nos proporciona uma redução de código e um ganho considerável na utilização do polimorfismo, pois com elas podemos criar métodos mais genéricos que se adaptam a diversos tipos de objetos.
+    Uma classe abstrata é uma superclasse criada apenas para representar entidades e conceitos abstratos, e dela não são gerados objetos, ou seja, a classe abstrata não é instanciada. 
+    Geralmente criamos uma classe com um propósito específico, porém, a classe abstrata tem outra função, ela é criada com a intenção de que outras classes herdem funcionalidades delas. É definida como um modelo genérico a ser utilizado pelas suas subclasses.
+    A utilização de classes abstratas nos proporciona uma redução de código e um ganho considerável na utilização do polimorfismo, pois com elas podemos criar métodos mais genéricos que se adaptam a diversos tipos de objetos.
 
 ### Interfaces
-O Python não possui uma palavra reservada interface. Mesmo sem uma palavra reservada para a mesma, toda classe possui uma interface. Interfaces são os atributos públicos definidos (que em Python são tanto atributos quanto métodos) em uma classe - isso inclui os métodos especiais como __str__() e __add__().
+    O Python não possui uma palavra reservada interface. Mesmo sem uma palavra reservada para a mesma, toda classe possui uma interface. Interfaces são os atributos públicos definidos (que em Python são tanto atributos quanto métodos) em uma classe - isso inclui os métodos especiais como __str__() e __add__().
 
-Uma interface vista como um conjunto de métodos para desempenhar um papel é o que os programadores da SmallTalk chamavam de protocolo, e este termo foi disseminado em comunidades de programadores de linguagens dinâmicas. Esse protocolo funciona como um contrato.
+    Uma interface vista como um conjunto de métodos para desempenhar um papel é o que os programadores da SmallTalk chamavam de protocolo, e este termo foi disseminado em comunidades de programadores de linguagens dinâmicas. Esse protocolo funciona como um contrato.
 
-Os protocolos são independentes de herança. Uma classe pode implementar vários protocolos, como os mix-ins. Protocolos são interfaces e são definidos apenas por documentação e convenções em linguagens dinâmicas, por isso são considerados informais. Os protocolos não podem ser verificados estaticamente pelo interpretador.
+    Os protocolos são independentes de herança. Uma classe pode implementar vários protocolos, como os mix-ins. Protocolos são interfaces e são definidos apenas por documentação e convenções em linguagens dinâmicas, por isso são considerados informais. Os protocolos não podem ser verificados estaticamente pelo interpretador.
 
-O método __str__(), por exemplo, é esperado que retorne uma representação do objeto em forma de string. Nada impede de fazermos outras coisas dentro do método como deletar algum conteúdo ou fazer algum cálculo; ao invés de retornarmos apenas a string. Mas há um entendimento prévio comum do que este método deve fazer e está presente na documentação do Python. Este é um exemplo onde o contrato semântico é descrito em um manual. Algumas linguagens de tipagem estática, como Java, possuem interfaces em sua biblioteca padrão e podem garantir este contrato em tempo de compilação.
+    O método __str__(), por exemplo, é esperado que retorne uma representação do objeto em forma de string. Nada impede de fazermos outras coisas dentro do método como deletar algum conteúdo ou fazer algum cálculo; ao invés de retornarmos apenas a string. Mas há um entendimento prévio comum do que este método deve fazer e está presente na documentação do Python. Este é um exemplo onde o contrato semântico é descrito em um manual. Algumas linguagens de tipagem estática, como Java, possuem interfaces em sua biblioteca padrão e podem garantir este contrato em tempo de compilação.
 
 ## Arquivos .py
 ### tipos_primitivos.py
