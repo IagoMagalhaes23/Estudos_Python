@@ -24,7 +24,7 @@
    - O que é polimorfismo
    - Como funcionam interfaces
    - O que são abstrações
-- [ ] **Estruturas de Dados**:
+- [X] **Estruturas de Dados**:
    - No contexto dos computadores, uma estrutura de dados é uma forma específica de armazenar e organizar os dados na memória do computador para que esses dados possam ser facilmente recuperados e utilizados de forma eficiente quando necessário posteriormente.
    - Conhecer as principais estruturas de dados
    - Implementar as principais estruturas de dados
