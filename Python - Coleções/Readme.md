@@ -1,7 +1,7 @@
 # Python - Coleções:
 
 ## Tópicos objetivos:
-    -Uma coleção representa um grupo de objetos, conhecidos como seus elementos. Eles são como recipientes que agrupam vários itens em uma única unidade. Algumas coleções permitem a duplicação de elementos e outras não. Algumas são ordenadas e outras não ordenadas.
+    - Uma coleção representa um grupo de objetos, conhecidos como seus elementos. Eles são como recipientes que agrupam vários itens em uma única unidade. Algumas coleções permitem a duplicação de elementos e outras não. Algumas são ordenadas e outras não ordenadas.
     - Utilizar listas e tuplas
     - Utilizar polimorfismo nas coleções
     - Utilizar conjuntos e dicionários
@@ -29,9 +29,6 @@ Mostra exemplos de como declarar listas em Python.
 
 ### tuplas.py
 Mostra exemplos de como declarar tuplas em Python.
-
-### sets.py
-Mostra exemplos de como declarar sets em Python.
 
 ### dicionarios.py
 Mostra exemplos de como declarar dicionários em Python.
