@@ -28,7 +28,7 @@
    - No contexto dos computadores, uma estrutura de dados é uma forma específica de armazenar e organizar os dados na memória do computador para que esses dados possam ser facilmente recuperados e utilizados de forma eficiente quando necessário posteriormente.
    - Conhecer as principais estruturas de dados
    - Implementar as principais estruturas de dados
-- [ ] **Python - Coleções**:
+- [X] **Python - Coleções**:
    - Uma coleção representa um grupo de objetos, conhecidos como seus elementos. Eles são como recipientes que agrupam vários itens em uma única unidade. Algumas coleções permitem a duplicação de elementos e outras não. Algumas são ordenadas e outras não ordenadas.
    - Utilizar listas e tuplas
    - Utilizar polimorfismo nas coleções
