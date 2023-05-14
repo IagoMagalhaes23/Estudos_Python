@@ -83,9 +83,39 @@ Na POO (Programação Orientada a Objetos), os objetos do mundo real são analis
     O método __str__(), por exemplo, é esperado que retorne uma representação do objeto em forma de string. Nada impede de fazermos outras coisas dentro do método como deletar algum conteúdo ou fazer algum cálculo; ao invés de retornarmos apenas a string. Mas há um entendimento prévio comum do que este método deve fazer e está presente na documentação do Python. Este é um exemplo onde o contrato semântico é descrito em um manual. Algumas linguagens de tipagem estática, como Java, possuem interfaces em sua biblioteca padrão e podem garantir este contrato em tempo de compilação.
 
 ## Arquivos .py
-### tipos_primitivos.py
-Mostra exemplos de como declarar variaveis em Python.
+### abstracoes.py
+Entender o conceito de abstrações através de exemplos.
+
+### classes.py
+Entender o conceito de classes através de exemplos.
+
+### construtores.py
+Entender o conceito de construtores através de exemplos.
+
+### encapsulamento.py
+Entender o conceito de encapsulamento através de exemplos.
+
+### heranca.py
+Entender o conceito de herança através de exemplos.
+
+### interfaces.py
+Entender o conceito de interfaces através de exemplos.
+
+### metodos.py
+Entender o conceito de métodos através de exemplos.
+
+### objetos.py
+Entender o conceito de objetos através de exemplos.
+
+### polimorfismo.py
+Entender o conceito de polimorfismo através de exemplos.
 
 ## Referências
 - INFORMÁTICA - POO JAVA. [S. l.: s. n.], 2013.
 - https://www.alura.com.br/apostila-python-orientacao-a-objetos/heranca-multipla-e-interfaces
+- https://www.pythonprogressivo.net/2018/11/Polimorfismo-O-que-Como-Usar-Como-fazer.html
+- https://pythonclub.com.br/introducao-classes-metodos-python-basico.html
+- https://www.treinaweb.com.br/blog/utilizando-heranca-no-python
+- https://algoritmosempython.com.br/cursos/programacao-python/encapsulamento/
+- https://acervolima.com/classes-abstratas-em-python/
+- https://realpython.com/python-interface/
