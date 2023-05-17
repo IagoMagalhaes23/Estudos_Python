@@ -128,7 +128,7 @@
    - Escrever código que lê as informações e metadados de objetos em tempo de execução
    - Obter nomes de classes em tempo de execução e criar objetos de uma classe
 ## Habilidade Auxiliar: Infraestrutura 
-- [ ] **Git e GitHub - Fundamentos**:
+- [X] **Git e GitHub - Fundamentos**:
    - Git é um sistema de controle de versão distribuído gratuito e de código aberto projetado para lidar com tudo, desde projetos pequenos a muito grandes com velocidade e eficiência.
    - GitHub é um serviço de hospedagem para desenvolvimento de software e controle de versão usando Git.
    - Criar um repositório
