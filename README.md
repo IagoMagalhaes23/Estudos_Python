@@ -137,7 +137,7 @@
    - Reverter um commit
    - Criar branches e pul requests
    - Lidar com merge e conflitos
-- [ ] **HTTP - Fundamentos**:
+- [X] **HTTP - Fundamentos**:
    - HTTP significa Hyper Text Transfer Protocol. A comunicação entre computadores cliente e servidores web é feita enviando solicitações HTTP e recebendo respostas HTTP.
    - Entender a diferença dos verbos HTTP
    - Testar os requests e ver os status codes no navegador
