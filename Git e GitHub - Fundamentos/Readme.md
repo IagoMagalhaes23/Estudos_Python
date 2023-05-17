@@ -124,7 +124,7 @@
     Faça o commit das suas alterações com um comentário.
 
     $ git commit -m "Resolved merge conflict by incorporating both suggestions."
-    
+
 ## Exemplos
 
 ### Contribuir para um repositório existente
@@ -204,3 +204,6 @@
 - https://docs.github.com/pt/get-started/using-git/about-git
 - https://pt.stackoverflow.com/questions/411048/como-criar-uma-nova-branch-no-github
 - https://jtemporal.com/desfazendo-um-ou-mais-commits/
+- https://docs.github.com/pt/get-started/using-git/resolving-merge-conflicts-after-a-git-rebase
+- https://docs.github.com/pt/pull-requests/
+collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line
