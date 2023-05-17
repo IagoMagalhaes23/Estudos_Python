@@ -144,7 +144,7 @@
    - Saber fazer uma requisição HTTP na linha de comando com WGET
    - Baixar uma imagem com WGET
    - Fazer um post
-- [ ] **JSON**:
+- [X] **JSON**:
    - JSON significa JavaScript Object Notation (notação de objeto JavaScript). É um formato de texto para armazenar e transmitir dados.
    - Criar um objeto
    - Transformar um objeto em uma string
