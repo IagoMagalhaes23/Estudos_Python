@@ -180,7 +180,7 @@
    - Os Notebooks facilitam a elaboração de projetos de Data Science por ser possível visualizar o resultado da execução logo após o trecho de código
    - O Google Colaboratory permite escrever e executar códigos Python diretamente no navegador, sem nenhuma ou poucas configurações necessárias
    - Essas ferramentas facilitam o compartilhamento de projetos entre o time
-- [ ] **Extração e Tratamento de Dados**:
+- [X] **Extração e Tratamento de Dados**:
    - A extração de dados é o processo de coleta ou recuperação de tipos diferentes de dados de uma variedade de fontes, muitos dos quais podem estar mal organizados ou completamente desestruturados.
    - Obter os dados que serão analisados
    - Tratar os dados obtidos, transformando-os, alterando sua estrutura e valores a fim de deixar a base de dados mais coerente e garantir que os dados que serão trabalhados estejam nas melhores condições para serem analisados
