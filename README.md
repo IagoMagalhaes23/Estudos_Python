@@ -91,7 +91,7 @@
    - Modularizar seu sistema em pacotes menores
    - Conhecer a plataforma Docker
    - Conhecer Kubernetes
-- [ ] **Python - Tipagem estática**:
+- [X] **Python - Tipagem estática**:
    - Python é uma linguagem dinamicamente tipada, ou seja, não há necessidade de pensar em tipos de dados. Linguagens estaticamente tipadas (tais como C ou Java) realizam verificações de tipo durante a compilação. Pode parecer mais seguro, pois você pode dizer imediatamente o tipo de parâmetro de cada função.
    - Conhecer type hinting
 - [ ] **Python - Geradores**:
