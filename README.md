@@ -108,7 +108,7 @@
    - Conhecer o conceito de objetos aguardáveis
    - Criar tarefas concorrentemente
    - Conhecer a biblioteca 'asyncio'
-- [ ] **Python - args & kwargs**:
+- [X] **Python - args & kwargs**:
    - As variáveis mágicas *args e **kwargs são normalmente usadas na definições de uma função, e são usadas para passar um número desconhecido de argumentos para uma função.
    - Entender a diferença entre *args e **kwargs
 - [ ] **Python - Métodos especiais (dunder)**:
