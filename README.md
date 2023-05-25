@@ -158,7 +158,7 @@
    - Conhecer a diferença entre IaaS, PaaS e SaaS
    - Conhecer os maiores provedores de cloud
    - Especializar-se em algum provedor
-- [ ] **SQL - Fundamentos**:
+- [X] **SQL - Fundamentos**:
    - SQL (Structured Query Language, traduzindo, Linguagem de Consulta Estruturada) é uma linguagem de programação padronizada que é usada para gerenciar bancos de dados relacionais e realizar várias operações sobre os dados neles contidos.
    - Conhecer os comandos mais comuns do SQL
    - Usar SELECT para consultar uma tabela
