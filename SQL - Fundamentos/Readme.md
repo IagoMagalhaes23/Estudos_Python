@@ -114,77 +114,77 @@ dados.
 - Para conhecer quais os bancos de dados existentes dentro do MySQL basta usar o comando SHOW DATABASES. SHOW significa mostrar, 
 apresentar, exibir e DATABASES significa bases de dados ou bancos de dados, ou seja, manda mostrar os bancos de dados existentes.
    
-   SHOW DATABASES;
+      SHOW DATABASES;
    
 - Criação de um novo banco de dados
-- 
-   CREATE DATABASE 'nome do banco';
+
+      CREATE DATABASE 'nome do banco';
    
 - Para que você possa ter acesso a qualquer informação do banco de dados, ou mesmo criar tabelas, inserir registro ou fazer uma consulta você precisa entrar dentro dele. O comando para isso é USE <nome do banco>;
    
-   USE 'nome do banco';
+      USE 'nome do banco';
    
 - Agora como você já tem o banco de dados e entrou nele, você já pode começar a criar as tabelas do seu banco. Para criar tabelas é preciso seguir um padrão básico:
    
-   CREATE TABLE 'nome da tabela'(
-      <nome da coluna> <tipo de dados> (<quantidade de caracteres>),
-      <nome da coluna> <tipo de dados> (<quantidade de caracteres>)
-   );
+      CREATE TABLE 'nome da tabela'(
+         <nome da coluna> <tipo de dados> (<quantidade de caracteres>),
+         <nome da coluna> <tipo de dados> (<quantidade de caracteres>)
+      );
          
 - Para ver como ficou a estrutura das tabelas criadas usamos o codigo DESCRIBE TABLE <nome da tabela>; ou somente DESC TABLE <nome da 
 tabela>;
          
-   DESCRIBE TABLE 'nome da tabela';
+      DESCRIBE TABLE 'nome da tabela';
          
 - Mais se você quer ver como foi criada a tabela pode usar o comando SHOW CREATE TABLE <nome da tabela>
          
-   SHOW CREATE TABLE 'nome da tabela';
+      SHOW CREATE TABLE 'nome da tabela';
          
 - Usando o comando ALTER, é possível realizar as seguintes alterações na estrutura de uma tabela: Adicionar, excluir e alterar colunas
 Exemplo ADD:
          
-   ALTER TABLE <nome da tabela> ADD <nome da coluna> <tipo de dado>;
+      ALTER TABLE <nome da tabela> ADD <nome da coluna> <tipo de dado>;
          
 Exemplo FIRST:
 Usando o mesmo banco de dados, porém na tabela aluno vamos adicionar a coluna código como sendo a primeira coluna e chave primaria da tabela.
          
-   ALTER TABLE <nome da tabela> ADD <nome da coluna> <tipo de dado> AUTO_INCREMENT PRIMARY KEY FIRST;
+      ALTER TABLE <nome da tabela> ADD <nome da coluna> <tipo de dado> AUTO_INCREMENT PRIMARY KEY FIRST;
          
 Exemplo AFTER:
 O FIRT insere na primeira coluna, já com o AFTER você escolhe a posição que deseja que a coluna fique, ou melhor, depois de quem a coluna vai ficar. Usando a mesma tabela aluno vamos inserir a coluna nascimento depois da coluna nome.
          
-   ALTER TABLE <nome da tabela> ADD <nome da coluna> <tipo de dado> AFTER 'nome da coluna';
+      ALTER TABLE <nome da tabela> ADD <nome da coluna> <tipo de dado> AFTER 'nome da coluna';
          
 Exemplo DROP:
 Para excluir uma coluna usamos o comando ALTER TABLE <nome da tabela> DROP <nome da coluna>;
          
-   ALTER TABLE <nome da tabela> DROP <nome da coluna>
+      ALTER TABLE <nome da tabela> DROP <nome da coluna>
          
 Também podemos alterar o tipo e o nome de uma coluna. Usamos o comando:
          
-   ALTER TABLE <nome da tabela> CHANGE <nome da coluna> <nome da nova coluna> <tipo de dado da nova coluna>;
+      ALTER TABLE <nome da tabela> CHANGE <nome da coluna> <nome da nova coluna> <tipo de dado da nova coluna>;
          
 Exemplo CHANGE:
 Como exemplo suponha que a coluna código da tabela aluno não está no padrão das outras tabelas do banco, porque nas outras tabelas a PK é definida com o nome “id” e no máximo de 10 caracteres. Então em vez de excluir toda a tabela ou excluir toda a coluna podemos usar a cláusula CHANGE e renomear o campo.
          
-   ALTER TABLE aluno CHANGE codigo id INT(10) auto_increment;
+      ALTER TABLE aluno CHANGE codigo id INT(10) auto_increment;
          
 - Excluir Tabelas
 Para que você possa excluir uma tabela é preciso que ela exista dentro do banco de dados. Normalmente primeiro usamos o comando SHOW TABLES, para saber as tabelas que existem dentro do BD. Após usamos o comando:
          
-   DROP TABLE <nome da tabela>;
+      DROP TABLE <nome da tabela>;
          
 Muitos se confundem entre o DELETE e o DROP. O comando DELETE é usado para manipulação e não para definição dos dados, ou seja, o DELETE remove os registros enquanto que o DROP remove a estrutura.
 - Excluir Banco de Dados
 Assim como para excluir tabelas é preciso ver quais existem no BD, para excluir banco de dados é bom ver quais os bancos de dados existentes dentro do SGBD, o comando usado é SHOW DATABASES. Mas se você não quer perder tempo olhando os bancos de dados existentes é só acrescentar IF EXISTS após o comando DROP DATABASE. Assim:
          
-   DROP DATABASE IF EXISTS <nome do banco de dados>;
+      DROP DATABASE IF EXISTS <nome do banco de dados>;
          
 - CHAVE PRIMÁRIA E CHAVE ESTRANGEIRA
 Os Bancos de Dados Relacionais são formados de várias tabelas e utilizam chaves como forma de referenciar outras tabelas. Esse relacionamento entre as tabelas é feito através das chaves estrangeiras. Quando falamos de chave estrangeira usamos a sigla FK referente à palavra FOREIGN KEY.
 A definição da chave estrangeira segue o seguinte padrão:
          
-   FOREIGN KEY<nome da FK> REFERENCES < tabela da PK>(<nome da PK>)
+      FOREIGN KEY<nome da FK> REFERENCES < tabela da PK>(<nome da PK>)
          
 OBS: o nome e o tipo de dado da PK devem ser o mesmo da FK. A palavra REFERENCES é usada para dizer qual tabela a FK está referenciando.
 
