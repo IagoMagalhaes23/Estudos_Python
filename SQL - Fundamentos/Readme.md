@@ -188,17 +188,17 @@ A definição da chave estrangeira segue o seguinte padrão:
          
 OBS: o nome e o tipo de dado da PK devem ser o mesmo da FK. A palavra REFERENCES é usada para dizer qual tabela a FK está referenciando.
 
-- INSERT
+- INSERT<br>
 Já demonstramos como criar uma tabela no banco de dados, agora mostraremos as maneiras básicas de se inserir dados nessa tabela. O comando usado para inserir dados é o INSERT.  A síntese básica do comando INSERT é a seguinte:
             
-   INSERT INTO <nome da tabela> (campo1, campo2) VALUES (valor1, valor2);
+      INSERT INTO <nome da tabela> (campo1, campo2) VALUES (valor1, valor2);
 
 Cada valor é inserido no campo que corresponde à posição do valor na lista: valor1 é inserido no campo1, valor2 no campo2 e assim por diante.
 OBS: Os valores devem ser separados com uma vírgula e se o tipo do campo for texto deve está entre aspas duplas ou simples
 
 emos também a opção de omitir as declarações dos campos. Essa sintaxe funciona somente se forem repassados valores para todas as colunas.
             
-   INSERT INTO <nome da tabela> VALUES (valor1, valor2, valor3,…);
+      INSERT INTO <nome da tabela> VALUES (valor1, valor2, valor3,…);
             
 Cada valor é inserido no campo que corresponde a sequência das colunas na tabela, se a primeira coluna, por exemplo, for o nome então o valo1 deve ser o nome, se a segunda coluna, por exemplo, for idade então o valor2 deve ser a idade e assim por diante. 
 OBS: Se a coluna for declarada como AUTO_INCREMENT basta você colocar o valor que corresponde a essa coluna como sendo zero(0). O valor zero(0) não influencia em nada porem se ele for esquecido vai ser gerado um erro.
@@ -207,7 +207,7 @@ OBS: Se a coluna for declarada como AUTO_INCREMENT basta você colocar o valor q
    1. SELECT
    A forma mais simples de se fazer um SELECT é recuperando todos os dados de uma tabela. A síntese básica é: 
          
-      SELECT * FROM <nome da tabela>;  
+         SELECT * FROM <nome da tabela>;  
             
 OBS: O * (asterisco) substitui os nomes de todas as colunas, e todas serão selecionadas para o resultado da consulta. A instrução FROM indica de qual tabela estamos buscando os dados. 
        Caso não fosse de nosso desejo mostrar todas as colunas no resultado da consulta,  bastaria  nomear  as  colunas  que  deveriam  aparecer  no  lugar  do * (asterisco) e separadas por vírgula.
@@ -345,4 +345,66 @@ Este comando irá selecionar todas as linhas cuja coluna tiver um valor entre 10
 
       SELECT * FROM alunos WHERE idade > = 10 AND idade  < = 20;
 
+- JOIN
+1. Inner Join
+O Inner Join é o método de junção mais conhecido e retorna os registros que são comuns às duas tabelas.
+
+      SELECT a.Nome, b.Nome
+      FROM TabelaA as A
+      INNER JOIN TabelaB as B
+                      on a.Nome = b.Nome
+
+2. Left Join
+O Left Join, tem como resultado todos os registros que estão na tabela A (mesmo que não estejam na tabela B) e os registros da tabela B que são comuns à tabela A.
+
+      SELECT a.Nome, b.Nome
+      FROM TabelaA as A
+      LEFT JOIN TabelaB as B
+                      on a.Nome = b.Nome
+
+3. Right Join
+Usando o Right Join, teremos como resultado todos os registros que estão na tabela B (mesmo que não estejam na tabela A) e os registros da tabela A que são comuns à tabela B.
+
+      SELECT a.Nome, b.Nome
+      FROM TabelaA as A
+      RIGHT JOIN TabelaB as B
+        on a.Nome = b.Nome
+
+4. Outer Join
+O Outer Join (também conhecido por Full Outer Join ou Full Join), tem como resultado todos os registros que estão na tabela A e todos os registros da tabela B.
+
+      SELECT a.Nome, b.Nome
+      FROM TabelaA as A
+      FULL OUTER JOIN TabelaB as B
+          on a.Nome = b.Nome
+
+5. Left Excluding Join
+Retorna como resultado todos os registros que estão na tabela A e que não estejam na tabela B.
+
+      SELECT a.Nome, b.Nome
+      FROM TabelaA as A
+      LEFT JOIN TabelaB as B
+                      on a.Nome = b.Nome
+      WHERE b.Nome is null
+
+6. Right Excluding Join
+O Right Excluding Join, retorna como resultado todos os registros que estão na tabela B e que não estejam na tabela A.
+
+      SELECT a.Nome, b.Nome
+      FROM TabelaA as A
+      RIGHT JOIN TabelaB as B
+          on a.Nome = b.Nome
+      WHERE a.Nome is null
+
+7. Outer Excluding Join
+Usando o Outer Excluding Join, teremos como resultado todos os registros que estão na tabela B, mas que não estejam na tabela A, e todos os registros que estão na tabela A, mas que não estejam na tabela B.
+
+      SELECT a.Nome, b.Nome
+      FROM TabelaA as A
+      FULL OUTER JOIN TabelaB as B
+          on a.Nome = b.Nome
+      WHERE a.Nome is null or b.Nome is null
+
 ## Referências
+- 
+- https://www.devmedia.com.br/sql-join-entenda-como-funciona-o-retorno-dos-dados/31006
