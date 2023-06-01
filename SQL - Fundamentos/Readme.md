@@ -224,7 +224,7 @@ vi. **DISTINCT**: Utilizada para selecionar dados sem repetição.
 - Exemplo WHERE
 Se quisermos ver somente o nome e o endereço do cliente, como já foi dito basta colocar os nomes das colunas depois do SELECT, porém quando temos muitos registros e precisamos de uma informação especifica usamos a condição WHERE que em português significado ONDE.  Sempre a cláusula WHERE vem acompanhada de alguma condição, por exemplo: 
 
-   SELECT nome, endereco FROM cliente WHERE cliente_id = 2 ; 
+      SELECT nome, endereco FROM cliente WHERE cliente_id = 2 ; 
  
 Podemos ler o comando SQL da seguinte forma:  
 Selecione o nome e o endereço da tabela cliente onde cliente_id for igual a 2.
@@ -232,14 +232,14 @@ Selecione o nome e o endereço da tabela cliente onde cliente_id for igual a 2.
 - Exemplo ORDER BY
          Até  o  momento  vimos  como  obter  dados  de  uma  tabela  utilizando  os comandos SELECT e WHERE. Porém, frequentemente precisamos listar os dados por uma ordem em particular. Pode ser por ordem ascendente ou descendente. Para isso podemos utilizar a cláusula ORDER BY para ordenar os dados. A sintaxe básica da cláusula ORDER BY é a seguinte: 
 
-   SELECT < coluna > FROM < tabela > ORDER BY < coluna >;
+      SELECT < coluna > FROM < tabela > ORDER BY < coluna >;
 
 OBS: Por padrão o ORDER BY vem como ASC significa que os resultados serão apresentados por ordem ascendente, ou seja, do menor para o maior. Mais também pode ser DESC significa que os resultados serão apresentados por ordem descendente, para isso acontecer você precisa declara-lo.
 
 - UPDATE 
 O comando para atualizar os dados é UPDATE, ele possui a seguinte sintaxe:
 
-   UPDATE < tabela > SET < campo > = “novo valor” WHERE < condição > ;
+      UPDATE < tabela > SET < campo > = “novo valor” WHERE < condição > ;
 
 tabela: nome da tabela que será modificada 
 set: define qual campo será alterado  
@@ -250,18 +250,18 @@ condição: regra que impõe condição para execução do comando
 
 Também podemos alterar mais de um campo de uma vez. Suponhamos que o cliente Pedro se mudou para outra cidade, precisamos alterar o endereço e a cidade atual, não precisamos criar dois UPDATES basta separa-los por vírgula.
 
-   UPDATE < tabela > SET < campo1 > = “valor1”, < campo2 > = “valor2” WHERE < condição > ;
+      UPDATE < tabela > SET < campo1 > = “valor1”, < campo2 > = “valor2” WHERE < condição > ;
 
 OBS: Devemos passar sempre o WHERE, que é uma espécie de filtro em nossa tabela, porque senão o passarmos atualizaremos TODOS os dados da tabela e isso pode acarretar diversos problemas, dependendo do tamanho e da complexidade da sua tabela. Imagina se esquecermos de colocar uma condição em uma tabela de 1.000 registros e alterarmos todos os endereços dos clientes para um só.
 
 - DELETE
 A forma mais simples de se fazer um DELETE é excluindo todos os dados de uma tabela. A síntese básica é: 
 
-   DELETE FROM < nome da tabela >;  
+      DELETE FROM < nome da tabela >;  
 
 Se não for especificada nenhuma condição então serão excluídos todos os dados da tabela, porém se você quer excluir somente um registro é preciso usar a cláusula WHERE informando qual será a condição para deletar.
 
-   DELETE FROM < nome da tabela > WHERE < condição >;
+      DELETE FROM < nome da tabela > WHERE < condição >;
 
 OBS:  Lembre-se  que  este  comando,  assim  como  o  UPDATE,  pode  ser perigoso  em  algumas  situações,  já  que,  uma  vez  executado  esses comandos, não será possível desfazer a ação realizada. Portanto, devemos ficar atentos ao usar esses comandos em tabelas complexas.
 
@@ -274,34 +274,34 @@ v. **AVG**: Utilizada para calcular a media dos valores de um campo determinado.
 
 - Exemplo Contagem (COUNT)
 
-   SELECT COUNT(campo) FROM  < nome da tabela > ;
+      SELECT COUNT(campo) FROM  < nome da tabela > ;
 
 - Exemplo SOMA (SUM) 
 
-   SELECT SUM(campo) FROM  < nome da tabela > ;
+      SELECT SUM(campo) FROM  < nome da tabela > ;
 
 - Exemplo Máximo (MAX)
 
-   SELECT MAX(campo) FROM  < nome da tabela > ;
+      SELECT MAX(campo) FROM  < nome da tabela > ;
 
 - Exemplo Mínimo (MIN) 
 
-   SELECT MIN(campo) FROM  < nome da tabela > ;
+      SELECT MIN(campo) FROM  < nome da tabela > ;
 
 - Exemplo Média (AVG)
 
-   SELECT AVG(campo) FROM  < nome da tabela > ;
+         SELECT AVG(campo) FROM  < nome da tabela > ;
 
 - Utilizando GROUP BY e HAVING
 É possível dividir o conjunto em grupos e aplicar a função de agregação a cada grupo. Para  executar essa  ação,  utilize uma  cláusula  GROUP  BY  na  consulta. Aprendemos  que  a  cláusula  WHERE  define  uma  condição  de  retorno  de  um comando SELECT. Os grupos também podem ser filtrados utilizando uma cláusula HAVING, que testa as propriedades de grupo envolvendo funções agregadas.  
 OBS: O HAVING é diferente do WHERE. O WHERE restringe os resultados obtidos  sempre  após  o  uso  da  cláusula  FROM,  ao  passo  que  a  cláusula HAVING filtra o retorno do agrupamento.
 Suponhamos que precisamos saber o total de quanto cada cliente precisa pagar, para isso utilizamos o GROUP BY, veja como fica o código: 
 
-   SELECT ClienteID, SUM(ValorTotal) FROM vendas GROUP BY ClienteID ;
+      SELECT ClienteID, SUM(ValorTotal) FROM vendas GROUP BY ClienteID ;
 
 Agora se queremos saber somente os totais dos clientes que vão pagar um valor que seja maior que 200,00 R$ precisamos passar uma condição para o select utilizando a cláusula HAVING.
 
-   SELECT ClienteID, SUM(ValorTotal) FROM vendas GROUP BY ClienteID HAVING SUM(ValorTotal) > 200;
+      SELECT ClienteID, SUM(ValorTotal) FROM vendas GROUP BY ClienteID HAVING SUM(ValorTotal) > 200;
 
 OBS: Aqui eu coloquei somente alguns exemplos, se eu fosse colocar todas as ações que podem ser feitas usando os comandos SQL. Acredito que não acabaríamos essa apostila tão cedo, espero que você não faça somente os exemplos  mostrados  na  apostila,  procure  se  aprofundar  e  com  base  nos exemplos,  construa  seus  próprios  comandos,  não  espere  pelo  professor. Estude e faça exemplos antes mesmo de o professor pedir.
 
@@ -331,7 +331,7 @@ Com este operador, podemos comparar Strings. O percentual (%) substitui nenhum, 
 7. LIKE '%A_: Todos que tenham a letra A na panúltima posição e a última seja qualquer outro caractere;
 8. LIKE '_A%: Todos que tenham a letra A na segunda posição e o primeiro caractere seja qualquer um;
 
-   SELECT * FROM contatos WHERE nome LIKE ' < condição > ' ;
+      SELECT * FROM contatos WHERE nome LIKE ' < condição > ' ;
 
 - Utilizando AND / OR 
 O operador AND exibe os registros se tanto a primeira condição como a segunda condição for verdadeira. O operador OR exibe os registros se a primeira condição ou a segunda for verdadeira. Esses operadores são usados para filtrar registros com base em mais de uma condição.
@@ -339,10 +339,10 @@ O operador AND exibe os registros se tanto a primeira condição como a segunda 
 - Exemplo BETWEEN
 O comando BETWEEN permite fazer a seleção de um intervalo, entre um e outro. A sintaxe da cláusula BETWEEN é a seguinte: 
 
-   SELECT * FROM alunos WHERE idade BETWEEN 10 AND 20;
+      SELECT * FROM alunos WHERE idade BETWEEN 10 AND 20;
 
 Este comando irá selecionar todas as linhas cuja coluna tiver um valor entre 10 e 20. Os valores podem ser números, texto ou datas. Poderíamos de outra forma obter o mesmo resultado que seria:
 
-   SELECT * FROM alunos WHERE idade > = 10 AND idade  < = 20;
+      SELECT * FROM alunos WHERE idade > = 10 AND idade  < = 20;
 
 ## Referências
