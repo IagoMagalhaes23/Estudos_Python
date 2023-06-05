@@ -172,7 +172,7 @@
    - O Solid possui cinco princípios considerados como boas práticas no desenvolvimento de software que ajudam os programadores a escrever os códigos mais limpos, separando as responsabilidades, diminuindo acoplamentos, facilitando na refatoração e estimulando o reaproveitamento do código.
 - [ ] **Clean Architecture**:
    - A Clean Architecture (Arquitetura Limpa) é uma forma de desenvolver software, de tal forma que apenas olhando para o código fonte de um programa, você deve ser capaz de dizer o que o programa faz.
-- [ ] **Design Patterns**:
+- [X] **Design Patterns**:
    - Na engenharia de software, um "padrão de projeto" (Design Pattern em inglês) é uma solução geral e reutilizável para um problema que ocorre normalmente dentro de um determinado contexto de projeto de software.
    - Conhecer e aplicar os principais Design Patterns
 - [X] **Jupyter & Colab notebooks**:
