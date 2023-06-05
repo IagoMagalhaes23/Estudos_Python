@@ -69,7 +69,7 @@
    - Trabalhar com modelos, serializers e views
    - Incluir filtros, buscas e ordenação
    - Limitar o número de requisições
-- [ ] **Python - MVC e MTV**:
+- [X] **Python - MVC e MTV**:
    - MVC e MTV são dois padrões de projeto (design patterns) utilizados para implementar interfaces e aplicações web.
    - Entender o padrão MVC
    - Entender o padrão MTV
