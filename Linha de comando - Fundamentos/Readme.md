@@ -89,12 +89,12 @@ Agora, vamos aprender a usar algumas das sintaxes no prompt de comando. Veja a l
 **Modificar um Diretório**
 Para navegar para um diretório ou pasta específica pelo prompt de comando, use CD [caminho]. Garanta que tenha um espaço antes de colocar o caminho (path) que você quer alcançar. Por exemplo:
 
-    'CD C:\Program Files'
+    CD C:\Program Files
 
 **Renomear um Arquivo**
 Para renomear um arquivo dentro de uma pasta específica, use REN [drive:][caminho] [fonte] [alvo]. Se você mencionar o local (path), isso significa que o arquivo renomeado será salvo na mesma pasta mencionada. Por exemplo:
 
-    ´´´REN d:untitled.txt untitled1.txt´´´
+    REN d:untitled.txt untitled1.txt
 
 **Apagar um Arquivo**
 Para apagar um arquivo pelo prompt de comando, use DEL [nomedoarquivo]. Se você quer forçar a exclusão de um arquivo, é só adicionar o comando certo antes do nome do arquivo. Por exemplo:
@@ -135,22 +135,22 @@ Para entender a sintaxe de comando no MacOS, vamos aprender alguns exemplos. Ele
 **Listar Todos os Arquivos em uma Pasta**
 Para saber quais arquivos estão em uma pasta, use ls. O comando padrão vai excluir os arquivos escondidos. Para mostrar todos os arquivos, você adicionar um -a. Por exemplo:
 
-    ´´´ls -a´´´
+    ls -a
 
 **Mudar de Diretório**
 Para mover para mudar para um diretório específico, use cd destino. Por exemplo:
 
-    ´´´cd ~/Desktop´´´
+    cd ~/Desktop
 
 **Renomear Arquivos**
 Para renomear um arquivo dentro de uma pasta específica, use mv fonte destino. Neste caso, você precisa saber qual o nome do arquivo e a extensão dele. Por exemplo:
 
-    ´´´mv ~/Desktop/untitled.rtf ~/Desktop/untitled1.rtf´´´
+    mv ~/Desktop/untitled.rtf ~/Desktop/untitled1.rtf
 
 **Apagar Arquivos**
 Para apagar um arquivo em uma pasta específica, use rm nome do arquivo. Para evitar deletar arquivos que você não quer, garanta que você mova estes arquivos para a pasta certa antes. Por exemplo:
 
-    ´´´rm untitled.rtf´´´
+    rm untitled.rtf
 
 Mais uma vez, digitar o comando certo é crucial quando se trabalha com qualquer CLI. Isso significa que você deve prestar atenção em cada caractere que for usar. Além disso, use o comando certo para cada caso.
 
@@ -169,9 +169,57 @@ Confira abaixo os quatro principais tipos de CLI do mercado:
 - GIT (Código aberto): a linha de comandos é a única ferramenta que permite rodar todos os comandos do GIT. Pode até ser mais simples e cômodo usar um software de controle de versões com uma interface gráfica, mas às vezes é necessário usar o CLI para se ter acesso a um recurso específico.
 
 ## CLI com Python
+### Estrutura de uma CLI em python
+A primeira vez que pensei em criar uma ferramenta de linha de comando me parecer que seria difícil, porém é quase o extremo contrário.
+
+Claro que depende muito do tamanho do projeto, mas para poder criar algo funcional apenas precisamos de uma estrutura simples como esta abaixo:
+
+    pasta_principal/ 
+    ├── README.md 
+    ├── install.sh 
+    ├── extensão 
+    ├── __init__.py 
+    ├── __main__.py 
+    └── search_handler.py 
+    └── setup.py
+
+**pasta_principal/**
+É a raiz do projeto, dentro dela que colocamos os arquivos e outros diretórios.
+
+**README.md & install.sh**
+Opcionais, servindo para documentar o seu projeto e fazer a instalação diretamente sem utilizar o pip install (mais abaixo eu explícito), respectivamente.
+
+**extensão**
+É a estrutura de um pacote python, que seria o mesmo que um diretório, porém com um arquivo __init__.py que faz o papel de indicar ao python que isso se trata de um pacote.
+
+Outro arquivo é o __main__.py , que é o arquivo principal do sistema, centralizando tudo que será chamado pelo comando ext, ou seja, é o que será executado primeiro no sistema, e todo o resto do fluxo deve seguir a partir dele e de sua função main() , como pode ser visto no projeto no GitHub.
+
+O terceiro arquivo, search_handler.py , é um módulo python, que é um arquivo python que serve como um agregador de funções, usado para organizar melhor o código.
+Ele possui uma biblioteca chamada wikipedia que faz o contato com o site de mesmo nome, assim retornando o resultado!
+
+**setup.py**
+Responsável por fazer a mágica de deixar o seu código instalável, basicamente ele cria sua CLI, e não precisa ser mais complexo que isso:
+
+    from setuptools import setup 
+    setup( 
+        name = 'extension', 
+        version = '0.1.0', 
+        packages = ['extension'], 
+        entry_points = { 
+            'console_scripts': [ 
+                'ext = extension.__main__:main' 
+            ] 
+        })
+
+O argumento responsável por executar o sistema é o “ext”, ele irá executar os processos que estiverem no caminho: extension.__main__.main()
+
+Para fazer a instalação, é necessário utilizar o pip install do python, e com ele usaremos também a flag -e para sinalizar que queremos atualizar o código assim que o projeto sofrer alterações (de forma automática), e por último, diremos ao pip que iremos instalar o diretório atual, posicionando um ponto ( . ).
+
+    pip instalar -e .
 
 ## CLI e AWS
 
 
 ## Referências
 - https://www.hostinger.com.br/tutoriais/o-que-e-cli
+- https://itanuromero.medium.com/como-criar-uma-cli-em-python-fd80320f7968
