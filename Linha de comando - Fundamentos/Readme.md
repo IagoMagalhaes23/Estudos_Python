@@ -266,16 +266,16 @@ Novos comandos de arquivos facilitam o gerenciamento dos seus objetos do Amazon 
     $ aws s3 ls s3://mybucket
 
 
-        LastWriteTime            Length Name
+            LastWriteTime            Length Name
 
 
-        ------------             ------ ----
+            ------------             ------ ----
 
 
-                                PRE myfolder/
+                                    PRE myfolder/
 
 
-2013-09-03 10:00:00           1234 myfile.txt
+    2013-09-03 10:00:00           1234 myfile.txt
 
 
 
