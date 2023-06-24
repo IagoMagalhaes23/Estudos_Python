@@ -218,8 +218,81 @@ Para fazer a instalação, é necessário utilizar o pip install do python, e co
     pip instalar -e .
 
 ## CLI e AWS
+A AWS Command Line Interface (AWS CLI) é uma ferramenta unificada para o gerenciamento de seus produtos da AWS. Com apenas uma ferramenta para baixar e configurar, você poderá controlar vários produtos da AWS pela linha de comando e automatizá-los usando scripts.
 
+A AWS CLI v2 oferece diversos novos recursos incluindo instaladores aprimorados, novas opções de configuração, como AWS IAM Identity Center (sucessor do AWS SSO), e vários recursos interativos.
+
+### aws-shell (Visualização do desenvolvedor)
+O aws-shell é um programa shell de linha de comando que oferece conveniência e recursos de produtividade para ajudar usuários novos e avançados da Interface da Linha de Comando da AWS. Os principais recursos incluem o seguinte.
+
+- Preenchimento automático de fuzzies para
+    Comandos (ex.: ec2, describe-instances, sqs, create-queue)
+    Opções (ex.: --instance-ids, --queue-url)
+    Identificadores de recurso (ex.: IDs de instância do Amazon EC2, URLs de fila do Amazon SQS, nomes de tópico do Amazon SNS)
+- Documentação em linha dinâmica
+    A documentação para comandos e opções é exibida conforme você vai digitando
+- Execução de comandos do shell do SO
+    Use comandos OS comuns, como cat, ls e cp, além de entradas e saídas pipe, sem sair do shell
+- Exporte comandos executados para um editor de texto
+
+Para saber mais, verifique a postagem relacionada no blog da Interface da Linha de Comando da AWS.
+
+### Uso
+O Guia do usuário da Interface da Linha de Comando da AWS orienta você durante a instalação e configuração da ferramenta. Depois disso, você pode começar a fazer chamadas para seus serviços AWS pela linha de comando.
+
+    $ aws ec2 describe-instances
+
+    $ aws ec2 start-instances --instance-ids i-1348636c
+
+    $ aws sns publish --topic-arn arn:aws:sns:us-east-1:546419318123:OperationsError --message "Script Failure"
+
+    $ aws sqs receive-message --queue-url https://queue.amazonaws.com/546419318123/Test
+
+Você pode obter ajuda na linha de comando para ver os serviços compatíveis,
+
+    $ aws help
+
+as operações para um serviço,
+
+    $ aws autoscaling help
+
+e os parâmetros para uma operação de serviço.
+
+    $ aws autoscaling create-auto-scaling-group help
+
+### Comandos de arquivos para o Amazon S3
+Novos comandos de arquivos facilitam o gerenciamento dos seus objetos do Amazon S3. Usando uma sintaxe familiar, você pode visualizar o conteúdo dos seus buckets do S3 em uma listagem baseada em diretório.
+
+    $ aws s3 ls s3://mybucket
+
+
+        LastWriteTime            Length Name
+
+
+        ------------             ------ ----
+
+
+                                PRE myfolder/
+
+
+2013-09-03 10:00:00           1234 myfile.txt
+
+
+
+Você pode fazer uploads e downloads recorrentes de vários arquivos com um único comando em nível de pasta. A ILC da AWS executará essas transferências em paralelo para obter maior performance.
+
+    $ aws s3 cp myfolder s3://mybucket/myfolder --recursive
+
+upload: myfolder/file1.txt to s3://mybucket/myfolder/file1.txt
+upload: myfolder/subfolder/file1.txt to s3://mybucket/myfolder/subfolder/file1.txt
+
+O comando sync facilita a sincronização do conteúdo de uma pasta local com uma cópia em um bucket do S3.
+
+    $ aws s3 sync myfolder s3://mybucket/myfolder --exclude *.tmp
+
+upload: myfolder/newfile.txt to s3://mybucket/myfolder/newfile.txt
 
 ## Referências
 - https://www.hostinger.com.br/tutoriais/o-que-e-cli
 - https://itanuromero.medium.com/como-criar-uma-cli-em-python-fd80320f7968
+- https://aws.amazon.com/pt/cli/
