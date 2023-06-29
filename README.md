@@ -119,7 +119,7 @@
    - Metaprogramação é uma técnica de programação com a qual programas têm a capacidade de tratar outros programas como seus dados. Isso significa que um programa pode ser projetado para ler, gerar, analisar ou transformar outros programas, e até mesmo modificar-se mesmo durante a execução.
    - Escrever um programa que manipula outros programas
    - Usar metaclasses
-- [ ] **Python - Multiprocessamento**:
+- [X] **Python - Multiprocessamento**:
    - Em Python, o módulo de multiprocessamento inclui uma API muito simples e intuitiva para dividir o trabalho entre vários processos.
    - Executar processos em paralelo
    - Conhecer a classe Pool
